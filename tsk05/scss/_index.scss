@@ -1,0 +1,161 @@
+body {
+    background-image: linear-gradient(174deg, $blue 2%, $blue 46%, $white 46%, $white 100%, $white 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 14px;
+}
+
+.title {
+    color: $black;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 42px;
+    line-height: 60px;
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+.input {
+    max-width: 500px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+
+    .add_txt {
+        padding: 15px 308px 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+        border: none;
+        border-radius: 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btn_add {
+        margin-left: -48px;
+        padding: 0 10px 4px;
+        display: block;
+        cursor: pointer;
+        background: $black;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 30px;
+    }
+}
+
+.list {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: $white;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+
+    .menu {
+        margin-bottom: 20px;
+
+        input {
+            width: 33.33%;
+            padding: 16px 0;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: $gray;
+        }
+
+        .selected {
+            color: $black;
+            border-bottom: 2px solid $black;
+            font-weight: bold;
+        }
+    }
+}
+
+.todoList {
+    li {
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        overflow: hidden;
+        label {
+            width: 100%;
+            display: block;
+            cursor: pointer;
+            overflow: hidden;
+
+            p {
+                width: 92%;
+                margin-left: 10px;
+                padding-bottom: 8px;
+                display: inline-block;
+                border-bottom: 1px solid $gray;
+            }
+        }
+    }
+
+    &:hover {
+        // 顯示出 delete 鍵
+        .delete {
+            color: $black;
+        }
+    }
+    li .checkBox {
+        cursor: pointer;
+        vertical-align: middle;
+
+        &+span {
+            display: none;
+        }
+
+        &:checked {
+            display: none;
+
+            // checked符號
+            &+span {
+                display: inline-block;
+                color: $blue;
+            }
+
+            // delete線
+            &+span+p {
+                text-decoration: line-through;
+                color: $gray;
+            }
+        }
+    }
+
+    li .delete {
+        background: none;
+        color: $white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.info {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+
+    .btn_clearDone {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $gray;
+
+        &:hover {
+            background: $blue;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}

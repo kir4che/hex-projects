@@ -1,0 +1,39 @@
+body {
+    overflow-x: hidden;
+    font: 'San Francisco', 'PingFang TC', san-serif;
+    font-size: 16px;
+}
+
+  *,*:before,*:after {box-sizing: border-box;}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    transition: all linear 300ms;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+ul,ol,li {
+    list-style: none;
+    padding: 0;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+}

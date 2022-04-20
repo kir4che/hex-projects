@@ -1,0 +1,249 @@
+.container {
+  max-width: 1110px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  .menu a {
+    position: relative;
+    display: block;
+    margin-top: 12px;
+    margin-left: 30px;
+    color: $gray-500;
+    font-size: 20px;
+    i {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    em {
+      display: none;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  header .menu {
+    .m-none {
+      display: none;
+    }
+    span {
+      display: none;
+    }
+    a em {
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      line-height: 16px;
+      text-align: center;
+      background: $brownishYellow;
+      border-radius: 7px;
+      color: $white;
+      font-style: normal;
+      font-size: 12px;
+    }
+  }
+}
+
+.banner {
+  height: 80vh;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  background: no-repeat center/cover url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
+  background-color: rgba(0, 0, 0, .2);
+  background-blend-mode: multiply;
+  color: $white;
+  .banner-content {
+    max-width: 425px;
+    margin-left: 60%;
+    margin-right: 5%;
+    p {
+      margin-top: -10px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: lighter;
+      line-height: 32px;
+    }
+    a {
+      width: 100%;
+      border-radius: 40px;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .banner .banner-content {
+    margin: 0 auto;
+  }
+}
+
+.topProduct-row {
+  display: flex;
+  .topProduct-img {
+    object-fit: cover;
+    max-height: 500px;
+    height: 45vw;
+    min-height: 360px;
+  }
+  .topProduct-content {
+    margin: auto;
+    .h4 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .more {
+      color: $brownishYellow;
+    }
+    .btn {
+      padding: 10px 20px;
+      color: $black;
+      border: 2px $black solid;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .topProduct-row {
+    margin: 0 12vw;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .topProduct-img {
+      object-fit: cover;
+      min-height: 480px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.hotProduct {
+  margin-top: 60px;
+  padding: 45px 0;
+  background-color: $light;
+  img {
+    max-width: 100%;
+    width: 350px;
+    max-height: 500px;
+    height: 40vw;
+  }
+  .card {
+    background-color: $light;
+    border: none;
+    a img:hover {
+      transform: scale(0.9);
+    }
+    .card-content {
+      padding-left: 0;
+      a {
+        color: $black;
+        font-weight: bold;
+      }
+      .original-price {
+        color: $gray-500;
+        text-decoration: line-through;
+      }
+    }
+    .soldOut {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .soldOut-img {
+        object-fit: cover;
+        filter: brightness(0.7);
+      }
+      h2 {
+        position: absolute;
+        font-style: italic;
+        color: $white;
+      }
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .hotProduct {
+    padding: 45px 10vw;
+    img {
+      object-fit: cover;
+      width: 100%;
+      min-height: 100vw;
+    }
+  }
+}
+
+.info {
+  margin: 60px auto;
+  display: flex;
+  align-items: center;
+  .info-content {
+    margin: auto;
+    .h4 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+    a {
+      color: $brownishYellow;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .info img {
+    margin-bottom: 10px;
+  }
+}
+
+.subscription {
+  height: 600px;
+  padding-top: 320px;
+  background: no-repeat center/cover url('https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index10.jpg?raw=true');
+  h2 {
+    color: $gray-500;
+    font-weight: bolder;
+  }
+  .sub_input {
+    padding: 14px 150px 19px 15px;
+    border: 2px $brownishYellow solid;
+  }
+  .btn {
+    margin-left: -6px;
+    background-color: $brownishYellow;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    &:hover {
+      background-color: $brownishYellow-100;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  background: $brownishYellow;
+  color: $white;
+  .footer-content p {
+    margin-top: 27px;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  ul {
+    display: flex;
+    font-size: 20px;
+    li:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  footer ul {
+    display: none;
+  }
+}

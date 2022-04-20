@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="css/all.css">
+    <!--字型-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&display=swap" rel="stylesheet">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="title">TODO&nbspLIST</h1>
+    <div class="input">
+        <input type="text" class="add_txt" placeholder="新增待辦事項"><input type="submit" class="btn_add" value="+">
+    </div>
+    <div class="list">
+        <div class="menu">
+            <input class="btn_all selected" type="button" value="全部"><input class="btn_undone" type="button" value="待完成"><input class="btn_done" type="button" value="已完成">
+        </div>
+        <ul class="todoList"></ul>
+        <div class="info">
+            <label class="undone_cnt">0 個待完成項目</label>
+            <input class="btn_clearDone" type="button" value="清除已完成項目">
+        </div>
+    </div>
+
+    <script src="all.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.title {
+    color: red;
+}
+
+.content {
+    color: black;
+}
+
+@media(max-width:768px) {
+    .title {
+        color: blue;
+    }
+    
+    .content {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:375px) {
+    .title {
+        color: yellow;
+    }
+}
